@@ -1,0 +1,40 @@
+{
+    "statistic":[
+    
+    {
+        "id": 6,
+        "temperature": 28.0,
+        "humidity": 53,
+        "datetime": "2024-11-27 16:30:00",
+        "account": "user202"
+    },
+    {
+        "id": 1,
+        "temperature": 25.6,
+        "humidity": 60,
+        "datetime": "2024-11-27 14:30:00",
+        "account": "user123"
+    },
+    {
+        "id": 2,
+        "temperature": 27.3,
+        "humidity": 55,
+        "datetime": "2024-11-27 15:00:00",
+        "account": "user456"
+    },
+    {
+        "id": 3,
+        "temperature": 26.1,
+        "humidity": 58,
+        "datetime": "2024-11-27 15:30:00",
+        "account": "user789"
+    },
+    {
+        "id": 4,
+        "temperature": 24.8,
+        "humidity": 65,
+        "datetime": "2024-11-27 16:00:00",
+        "account": "user101"
+    }
+]
+}

@@ -1,0 +1,27 @@
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+.DataTable {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.DataTable table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+
+.DataTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
