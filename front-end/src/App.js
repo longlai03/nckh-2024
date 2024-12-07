@@ -1,3 +1,4 @@
+
 import Dashboard from "./pages/dashboard/Dashboard";
 import Predict from "./pages/predict/Predict";
 import { Route, Routes, BrowserRouter } from "react-router-dom"
