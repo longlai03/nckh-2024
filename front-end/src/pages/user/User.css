@@ -1,0 +1,168 @@
+/* Định dạng chung cho toàn bộ container */
+.profile-container {
+    padding: 20px;
+    max-width: 600px; /* Thay đổi chiều rộng tối đa */
+    margin: auto;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.profile-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile-container p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Avatar */
+.profile-avatar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar img.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Nút chọn ảnh */
+.profile-avatar .btn-upload {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.profile-avatar .btn-upload:hover {
+    background-color: #0056b3;
+}
+
+.profile-avatar small {
+    display: block;
+    margin-top: 8px;
+    color: #888;
+    font-size: 12px;
+}
+
+/* Form field */
+.profile-field {
+    margin-bottom: 15px;
+}
+
+.profile-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-field input, 
+.profile-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.profile-field input:focus,
+.profile-field select:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.static-field {
+    display: inline-block;
+    padding: 8px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #555;
+}
+
+/* Nút hành động */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
+
+/* Lỗi */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Thiết kế cho Mobile */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .profile-avatar img.avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
