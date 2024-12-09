@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
 import { Box, Grid, Typography, Card, CardContent, Button } from "@mui/material";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 const Dashboard = () => {
@@ -11,13 +12,6 @@ const Dashboard = () => {
 
     return (
         <Box sx={{ p: 4 }}>
-            {/* Navigation */}
-            <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
-                <Button variant="contained" color="warning">Dashboard</Button>
-                <Button variant="outlined">Statistic</Button>
-                <Button variant="outlined">Predict</Button>
-                <Button variant="outlined">User</Button>
-            </Box>
 
             {/* Main Content */}
             <Grid container spacing={4}>
