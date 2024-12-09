@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { alpha } from '@mui/material/styles';
@@ -130,11 +129,11 @@ function EnhancedTable() {
 
   return (
     <Box sx={{ width: '100%' }}>
-        
+
       <Paper sx={{ width: '100%', mb: 2 }}>
-      <Typography variant="h6" component="div" sx={{ padding: 2 }} align="center">
-    Bảng thống kê
-  </Typography>
+        <Typography variant="h6" component="div" sx={{ padding: 2 }} align="center">
+          Bảng thống kê
+        </Typography>
         <TableContainer>
           <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle">
             <EnhancedTableHead
