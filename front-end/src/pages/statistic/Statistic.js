@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Table, TableContainer, TableHead, TableRow, TableCell, TableBody, TableSortLabel, TablePagination, Paper, Box, Typography } from '@mui/material';
+import { 
+  Table, TableContainer, TableHead, TableRow, TableCell, TableBody, 
+  TableSortLabel, TablePagination, Paper, Box, Typography 
+} from '@mui/material';
 import axios from 'axios';
 
 function descendingComparator(a, b, orderBy) {
@@ -24,8 +27,8 @@ const headCells = [
 ];
 
 function EnhancedTableHead({ order, orderBy, onRequestSort }) {
-  const createSortHandler = (property) => (event) => {
-    onRequestSort(event, property);
+  const createSortHandler = (property) => () => {
+    onRequestSort(property);
   };
 
   return (
@@ -57,8 +60,8 @@ function StatisticTable() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost/IOTWEB/nckh-2024/back-end/Statistic/get_Statistic.php');
-        setRows(res.data.phpresult || res.data); // Đồng bộ dữ liệu
+        const res = await axios.get('http://localhost:3301/statistic');
+        setRows(res.data);
       } catch (err) {
         console.error('Error fetching data:', err);
       }
@@ -66,7 +69,7 @@ function StatisticTable() {
     fetchData();
   }, []);
 
-  const handleRequestSort = (event, property) => {
+  const handleRequestSort = (property) => {
     const isAsc = orderBy === property && order === 'asc';
     setOrder(isAsc ? 'desc' : 'asc');
     setOrderBy(property);
@@ -96,12 +99,12 @@ function StatisticTable() {
           <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle">
             <EnhancedTableHead order={order} orderBy={orderBy} onRequestSort={handleRequestSort} />
             <TableBody>
-              {visibleRows.map((row, index) => (
-                <TableRow key={index}>
+              {visibleRows.map((row) => (
+                <TableRow key={row.id}>
                   <TableCell>{row.id}</TableCell>
-                  <TableCell>{row.tempurature}</TableCell>
-                  <TableCell>{row.humidfity}</TableCell>
-                  <TableCell>{row.date_time}</TableCell>
+                  <TableCell>{row.temperature}</TableCell>
+                  <TableCell>{row.humidity}</TableCell>
+                  <TableCell>{row.datetime}</TableCell>
                   <TableCell>{row.account}</TableCell>
                 </TableRow>
               ))}
