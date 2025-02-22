@@ -31,12 +31,42 @@ const User = () => {
         // Reset về giá trị ban đầu nếu cần thiết
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        alert("Thông tin đã được cập nhật!");
-        setIsEditing(false);
+    
+        const formData = new FormData();
+        formData.append("username", username);
+        formData.append("fullName", fullName);
+        formData.append("email", email);
+        formData.append("phone", phone);
+        formData.append("gender", gender);
+        formData.append("dob", dob);
+    
+        if (avatar) {
+            const response = await fetch(avatar);
+            const blob = await response.blob();
+            formData.append("avatar", blob, "avatar.jpg"); // Đặt tên file
+        }
+    
+        try {
+            const response = await fetch("http://localhost/nckh-2024/back-end/User/User.php", {
+                method: "POST",
+                body: formData,
+            });
+    
+            const result = await response.json();
+            if (result.success) {
+                alert("Thông tin đã cập nhật thành công!");
+                setIsEditing(false);
+            } else {
+                alert("Lỗi: " + result.message);
+            }
+        } catch (error) {
+            console.error("Lỗi khi gửi dữ liệu:", error);
+            alert("Có lỗi xảy ra, vui lòng thử lại!");
+        }
     };
-
+    
     return (
         <div className="profile-container">
             <h1>Hồ Sơ Của Tôi</h1>
