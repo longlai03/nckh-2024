@@ -1,0 +1,24 @@
+{
+  "name": "nckh-2024",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longlai03/nckh-2024.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/longlai03/nckh-2024/issues"
+  },
+  "homepage": "https://github.com/longlai03/nckh-2024#readme",
+  "description": "",
+  "dependencies": {
+    "chart.js": "^4.4.8",
+    "react-chartjs-2": "^5.3.0"
+  }
+}
